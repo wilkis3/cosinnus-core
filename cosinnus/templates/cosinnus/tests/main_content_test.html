@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test-Title</title>
+        {# test meta tags #}
+        <meta charset="utf-8"/>
+        {#  test vendor scripts #}
+        <script src="{% static "js/vendor/test.js" %}"></script>
+        {# test non-vendedor script #}
+        <script src="{% static 'js/cosinnus.js' %}"></script>
+        {# test script constants #}
+        <script type="text/javascript" class="v3-constants">
+            var constant;
+        </script>
+        {# test head inline script #}
+        <script type="text/javascript">
+            var head_script;
+        </script>
+        {# test css #}
+        <link href="{% static 'css/test.css' %}" rel="stylesheet">
+        {# test style #}
+        <style>
+            .test_style {}
+        </style>
+    </head>
+    <body>
+        <div class="x-v3-container">
+            {# test contet #}
+            Test-Content
+            {# test inline script #}
+            <script type="text/javascript">
+                var body_script;
+            </script>
+        </div>
+    </body>
+    <div class="x-v3-footer">
+        Test-Footer
+    </div>
+</html>
